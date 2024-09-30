@@ -6,6 +6,7 @@ import java.util.Map;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 
 import com.freemyip.c0de.entities.Employee;
+import com.freemyip.c0de.entities.Product;
 import com.freemyip.c0de.entities.Student;
 import com.freemyip.c0de.entities.keys.EmployeeKey;
 import com.freemyip.c0de.entities.keys.StudentKey;
@@ -39,31 +40,37 @@ public class Main {
 
             // working with employee data
 
-            EmployeeKey empId = new EmployeeKey();
-            empId.setId(1);
-            empId.setSerialNumber(12);
+            // EmployeeKey empId = new EmployeeKey();
+            // empId.setId(1);
+            // empId.setSerialNumber(12);
 
-            Employee emp = new Employee();
-            emp.setId(empId);
-            emp.setName("userA");
-            emp.setAddress("madihalli");
+            // Employee emp = new Employee();
+            // emp.setId(empId);
+            // emp.setName("userA");
+            // emp.setAddress("madihalli");
 
-            em.persist(emp);
+            // em.persist(emp);
 
             // working with student data
-            Student student = new Student();
-            student.setRollNumber(234);
-            student.setUniversityId(2024);
-            student.setName("pranav");
+            // Student student = new Student();
+            // student.setRollNumber(234);
+            // student.setUniversityId(2024);
+            // student.setName("pranav");
 
-            em.persist(student);
+            // em.persist(student);
 
-            StudentKey key = new StudentKey();
-            key.setRollNumber(234);
-            key.setUniversityId(2024);
+            // StudentKey key = new StudentKey();
+            // key.setRollNumber(234);
+            // key.setUniversityId(2024);
 
-            Student s = em.find(Student.class, key);
-            System.out.println("student is :" + s);
+            // Student s = em.find(Student.class, key);
+            // System.out.println("student is :" + s);
+
+            // working with custom generator
+            Product sampleHealth = new Product();
+            sampleHealth.setName("Protein Plus");
+
+            em.persist(sampleHealth);
 
             em.getTransaction().commit();
         } catch (Exception e) {

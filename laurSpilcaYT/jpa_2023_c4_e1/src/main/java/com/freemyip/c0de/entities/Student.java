@@ -21,21 +21,27 @@ public class Student {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public Integer getRollNumber() {
         return rollNumber;
     }
+
     public void setRollNumber(Integer rollNumber) {
         this.rollNumber = rollNumber;
     }
+
     public Integer getUniversityId() {
         return universityId;
     }
+
     public void setUniversityId(Integer universityId) {
         this.universityId = universityId;
     }
+
     @Override
     public String toString() {
         return "Student [rollNumber=" + rollNumber + ", universityId=" + universityId + ", name=" + name + "]";

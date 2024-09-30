@@ -15,7 +15,7 @@ public class Employee {
 
     @EmbeddedId
     private EmployeeKey id;
-    
+
     private String name;
 
     private String address;
@@ -48,6 +48,5 @@ public class Employee {
     public String toString() {
         return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
     }
-    
-    
+
 }
