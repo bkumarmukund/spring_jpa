@@ -39,12 +39,15 @@ public class Main {
             post.setContent("andani became the new owner!");
 
             Comment c1 = new Comment();
+            c1.setPost(post);
             c1.setContent("not a very good news");
             
             Comment c2 = new Comment();
+            c2.setPost(post);
             c2.setContent("ndtv is now managed by non media person");
             
             Comment c3 = new Comment();
+            c3.setPost(post);
             c3.setContent("ndtv now on path of other media houses");
 
             post.setComments(List.of(c1,c2,c3));

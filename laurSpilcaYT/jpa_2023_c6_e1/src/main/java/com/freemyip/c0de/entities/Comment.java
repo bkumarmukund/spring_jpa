@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -14,6 +15,10 @@ public class Comment {
     private Integer id;
 
     private String content;
+
+    @ManyToOne
+    @JoinColumn(name = "post_id")
+    private Post post;
 
     public Integer getId() {
         return id;
@@ -30,5 +35,14 @@ public class Comment {
     public void setContent(String content) {
         this.content = content;
     }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
+    }
+
 
 }
